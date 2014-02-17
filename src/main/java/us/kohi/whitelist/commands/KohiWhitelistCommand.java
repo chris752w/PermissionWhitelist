@@ -33,6 +33,10 @@ public class KohiWhitelistCommand implements CommandExecutor {
             return true;
         }
 
+        if(args.length == 0){
+            sender.sendMessage(ChatColor.RED + "/kwhitelist reload");
+            return true;
+        }
         if (args[0].equalsIgnoreCase("reload")) {
             plugin.reloadConfig();
             sender.sendMessage(ChatColor.LIGHT_PURPLE + "Configuration reloaded");
