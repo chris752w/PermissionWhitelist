@@ -4,9 +4,6 @@ package us.kohi.permissionwhitelist;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import us.kohi.permissionwhitelist.commands.PermissionWhitelistCommand;
-import us.kohi.permissionwhitelist.listeners.PermissionWhitelistLoginListener;
-
 public class PermissionWhitelist extends JavaPlugin {
     @Override
     public void onEnable() {
