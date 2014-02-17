@@ -21,7 +21,7 @@ public class PermissionWhitelistLoginListener implements Listener {
         Player player = event.getPlayer();
 
         if (!player.hasPermission("kwhitelist.whitelist")) {
-            event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, plugin.getConfig().getString("Whitelisted.Message"));
+            event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, plugin.getConfig().getString("Whitelisted"));
         }
     }
 }
