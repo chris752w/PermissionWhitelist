@@ -1,9 +1,3 @@
-
-/*
-* To change this license header, choose License Headers in Project Properties.
-* To change this template file, choose Tools | Templates
-* and open the template in the editor.
- */
 package us.kohi.permissionwhitelist.listeners;
 
 //~--- non-JDK imports --------------------------------------------------------
@@ -15,10 +9,6 @@ import org.bukkit.event.player.PlayerLoginEvent;
 
 import us.kohi.permissionwhitelist.PermissionWhitelist;
 
-/**
- *
- * @author Christian
- */
 public class PermissionWhitelistLoginListener implements Listener {
     private final PermissionWhitelist plugin;
 
