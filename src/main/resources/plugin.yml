@@ -1,0 +1,8 @@
+name: KohiWhitelist
+main: us.kohi.whitelist.KohiWhitelist
+version: 1.0-SNAPSHOT
+author: chris752w
+commands:
+    kwhitelist:
+        description: Reload configuration file
+        usage: /<command>
