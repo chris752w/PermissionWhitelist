@@ -4,25 +4,25 @@
 * To change this template file, choose Tools | Templates
 * and open the template in the editor.
  */
-package us.kohi.whitelist;
+package us.kohi.permissionwhitelist;
 
 //~--- non-JDK imports --------------------------------------------------------
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-import us.kohi.whitelist.commands.KohiWhitelistCommand;
-import us.kohi.whitelist.listeners.KohiWhitelistLoginListener;
+import us.kohi.permissionwhitelist.commands.PermissionWhitelistCommand;
+import us.kohi.permissionwhitelist.listeners.PermissionWhitelistLoginListener;
 
 /**
  *
  * @author Christian
  */
-public class KohiWhitelist extends JavaPlugin {
+public class PermissionWhitelist extends JavaPlugin {
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
-        this.getServer().getPluginManager().registerEvents(new KohiWhitelistLoginListener(this), this);
-        this.getCommand("kwhitelist").setExecutor(new KohiWhitelistCommand(this));
+        this.getServer().getPluginManager().registerEvents(new PermissionWhitelistLoginListener(this), this);
+        this.getCommand("wl").setExecutor(new PermissionWhitelistCommand(this));
     }
 
     @Override

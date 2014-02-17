@@ -4,7 +4,7 @@
 * To change this template file, choose Tools | Templates
 * and open the template in the editor.
  */
-package us.kohi.whitelist.listeners;
+package us.kohi.permissionwhitelist.listeners;
 
 //~--- non-JDK imports --------------------------------------------------------
 
@@ -13,16 +13,16 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
-import us.kohi.whitelist.KohiWhitelist;
+import us.kohi.permissionwhitelist.PermissionWhitelist;
 
 /**
  *
  * @author Christian
  */
-public class KohiWhitelistLoginListener implements Listener {
-    private KohiWhitelist plugin;
+public class PermissionWhitelistLoginListener implements Listener {
+    private final PermissionWhitelist plugin;
 
-    public KohiWhitelistLoginListener(KohiWhitelist plugin) {
+    public PermissionWhitelistLoginListener(PermissionWhitelist plugin) {
         this.plugin = plugin;
     }
 
@@ -30,8 +30,8 @@ public class KohiWhitelistLoginListener implements Listener {
     public void onLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
 
-        if (!player.hasPermission("kohi.whitelist")) {
-            event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, plugin.getConfig().getString("String.Whitelisted"));
+        if (!player.hasPermission("kwhitelist.whitelist")) {
+            event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, plugin.getConfig().getString("Whitelisted.Message"));
         }
     }
 }

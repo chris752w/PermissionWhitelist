@@ -1,8 +1,8 @@
-name: KohiWhitelist
-main: us.kohi.whitelist.KohiWhitelist
+name: PermissionWhitelist
+main: us.kohi.permissionwhitelist.PermissionWhitelist
 version: 1.0-SNAPSHOT
 author: chris752w
 commands:
-    kwhitelist:
+    wl:
         description: Reload configuration file
         usage: /<command>
