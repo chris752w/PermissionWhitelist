@@ -12,12 +12,18 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    <repositories>
+        <repository>
+            <id>md5-repo</id>
+            <name>md_5.net snapshots</name>
+            <url>http://repo.md-5.net/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.7.2-R0.4-SNAPSHOT</version>
+            <version>(1.7,1.8]</version>
         </dependency>
     </dependencies>
 </project>
