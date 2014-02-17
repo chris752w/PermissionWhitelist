@@ -18,7 +18,7 @@ public class PermissionWhitelistCommand implements CommandExecutor {
     }
 
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
-        if (!sender.hasPermission("kwhitelist.reload")) {
+        if (!sender.hasPermission("permissionwhitelist.reload")) {
             sender.sendMessage(RED + "You don't have permission.");
 
             return true;
