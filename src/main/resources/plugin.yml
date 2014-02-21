@@ -1,8 +1,6 @@
 name: PermissionWhitelist
-main: us.kohi.permissionwhitelist.PermissionWhitelist
+main: us.kohi.permissionwhitelist.PermissionWhitelistPlugin
 version: 1.0-SNAPSHOT
 author: chris752w
 commands:
-    wl:
-        description: Reload configuration file
-        usage: /<command>
+    wlreload: {}

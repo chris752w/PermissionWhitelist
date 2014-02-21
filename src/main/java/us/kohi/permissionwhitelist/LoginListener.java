@@ -7,10 +7,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
-public class PermissionWhitelistLoginListener implements Listener {
-    private final PermissionWhitelist plugin;
+public class LoginListener implements Listener {
+    private final PermissionWhitelistPlugin plugin;
 
-    public PermissionWhitelistLoginListener(PermissionWhitelist plugin) {
+    public LoginListener(PermissionWhitelistPlugin plugin) {
         this.plugin = plugin;
     }
 
@@ -19,7 +19,7 @@ public class PermissionWhitelistLoginListener implements Listener {
         Player player = event.getPlayer();
 
         if (!player.hasPermission("permissionwhitelist.whitelist")) {
-            event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, plugin.getConfig().getString("Not-Whitelisted"));
+            event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, plugin.getConfig().getString("notWhitelisted"));
         }
     }
 }

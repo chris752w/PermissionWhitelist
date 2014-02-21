@@ -6,17 +6,20 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import us.kohi.permissionwhitelist.PermissionWhitelist;
-
 import static org.bukkit.ChatColor.*;
 
-public class PermissionWhitelistCommand implements CommandExecutor {
-    private final PermissionWhitelist plugin;
+//~--- JDK imports ------------------------------------------------------------
 
-    public PermissionWhitelistCommand(PermissionWhitelist plugin) {
+import java.util.logging.Level;
+
+public class ReloadCommand implements CommandExecutor {
+    private final PermissionWhitelistPlugin plugin;
+
+    public ReloadCommand(PermissionWhitelistPlugin plugin) {
         this.plugin = plugin;
     }
 
+    @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if (!sender.hasPermission("permissionwhitelist.reload")) {
             sender.sendMessage(RED + "You don't have permission.");
@@ -25,7 +28,7 @@ public class PermissionWhitelistCommand implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            sender.sendMessage(RED + "/wl reload");
+            sender.sendMessage(RED + "/wlreload");
 
             return true;
         }
@@ -33,7 +36,7 @@ public class PermissionWhitelistCommand implements CommandExecutor {
         if (args[0].equalsIgnoreCase("reload")) {
             plugin.reloadConfig();
             sender.sendMessage(LIGHT_PURPLE + "Configuration reloaded.");
-            plugin.getLogger().warning("Configuration file reloaded by: " + sender.getName());
+            plugin.getLogger().log(Level.WARNING, "Configuration file reloaded by: {0}", sender.getName());
 
             return true;
         }
