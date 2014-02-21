@@ -21,7 +21,7 @@ public class ReloadCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
-        if (!sender.hasPermission("permissionwhitelist.reload")) {
+        if (!sender.hasPermission("kwhitelist.reload")) {
             sender.sendMessage(RED + "Permission denied.");
 
             return true;

@@ -18,7 +18,7 @@ public class LoginListener implements Listener {
     public void onLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
 
-        if (!player.hasPermission("permissionwhitelist.whitelist")) {
+        if (!player.hasPermission("kwhitelist.whitelist")) {
             event.disallow(PlayerLoginEvent.Result.KICK_WHITELIST, plugin.getConfig().getString("notWhitelisted"));
         }
     }
